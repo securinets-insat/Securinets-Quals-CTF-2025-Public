@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   ctf:
-    image: foren-windows:latest
+    build: .
     ports:
       - "1337:1339"
     deploy:
