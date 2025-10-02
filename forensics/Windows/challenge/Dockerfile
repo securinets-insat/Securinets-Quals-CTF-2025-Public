@@ -9,7 +9,7 @@ WORKDIR /home/ctf
 
 COPY ./flag.txt /home/ctf/flag.txt
 COPY ./asker /home/ctf/asker
-COPY ./questions.txt /home/ctf/question.txt
+COPY ./questions.txt /home/ctf/questions.txt
 
 RUN chmod +x ./asker /home/ctf/asker
 USER ctf
