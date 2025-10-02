@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  ctf:
+    image: foren-windows:latest
+    ports:
+      - "1337:1339"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1000M
+    read_only: true
+    cap_drop:
+      - all
+    cap_add:
+      - chown
+      - setuid
+      - setgid
+      - sys_admin
+      - mknod
+    security_opt:
+      - apparmor=unconfined
+      - seccomp=unconfined
+      - "label=type:container_runtime_t"
+      - "label=disable"
