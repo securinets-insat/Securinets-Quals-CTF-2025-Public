@@ -5,11 +5,9 @@ services:
     build: .
     ports:
       - "1337:1339"
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 1000M
+    restart: unless-stopped
+    mem_limit: 1000M
+    cpus: 1
     read_only: true
     cap_drop:
       - all

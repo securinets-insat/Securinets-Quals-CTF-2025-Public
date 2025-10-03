@@ -7,11 +7,5 @@ services:
     ports:
       - '8001:5000'
     restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          cpus: "2.0"
-          memory: 2g
-        reservations:
-          cpus: "1.0"
-          memory: 1g
+    mem_limit: 2G
+    cpus: 2
