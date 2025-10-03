@@ -5,7 +5,7 @@ const pool = new Pool({
   host: process.env.DB_HOST || "postgres",
   port: parseInt(process.env.DB_PORT) || 5432,
   user: process.env.DB_USER || "ctfuser",
-  password: process.env.DB_PASS || "ctfpass",
+  password: process.env.DB_PASS || "ctfpass789654123597aaa",
   database: process.env.DB_NAME || "ctfdb",
 });
 
