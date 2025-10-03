@@ -1,0 +1,21 @@
+name: "Fl1pper Zer0"
+author: "Aptx"
+category: crypto
+description: |-
+  Just stumped upon a new signing service, check it out!
+
+  `nc <IP> <PORT>`
+
+  **author**: Aptx
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - Securinets{bea0c8b66714035aaa7e7035868dd58ac229399449b663da96cf637f2ced3d84}
+files:
+  - src/chall.py
+state: hidden
+version: "0.1"

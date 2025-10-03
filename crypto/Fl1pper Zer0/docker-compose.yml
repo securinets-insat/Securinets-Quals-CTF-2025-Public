@@ -1,0 +1,10 @@
+version: '3'
+services:
+  crypto:
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile
+    container_name: fl1pper-zer0
+    ports:
+      - 4869:4869
+    restart: unless-stopped
