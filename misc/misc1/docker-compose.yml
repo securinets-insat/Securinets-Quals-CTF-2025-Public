@@ -3,7 +3,7 @@ services:
     build: .
     image: shifting-jail:latest
     ports:
-      - "1337:1337"
+      - "7000:1337"
     restart: unless-stopped
     mem_limit: 1000M
     cpus: 1
