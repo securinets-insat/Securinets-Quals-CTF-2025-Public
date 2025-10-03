@@ -6,5 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: fl1pper-zer0
     ports:
-      - 4869:4869
+      - 6000:4869
     restart: unless-stopped
+    mem_limit: 2000M
+    cpus: 2
