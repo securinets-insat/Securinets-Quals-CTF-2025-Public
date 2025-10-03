@@ -2,7 +2,7 @@ version: '3'
 services:
   crypto:
     build:
-      context: ./challenge
+      context: ./src
       dockerfile: Dockerfile
     container_name: fl1pper-zer0
     ports:
