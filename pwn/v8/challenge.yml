@@ -1,0 +1,21 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Sukunahikona"
+author: "buddurid"
+category: pwn
+description: i ran out of descriptions . Just solve it ig ??!!
+value: 500
+type: standard
+protocol: tcp
+connection_info: nc pwn-14caf623.p1.securinets.tn 1303
+flags:
+    - Securinets{}
+
+files:
+    - to_give.zip
+
+state: hidden
+
+version: "0.1"

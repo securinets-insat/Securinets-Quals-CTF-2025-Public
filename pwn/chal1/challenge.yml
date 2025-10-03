@@ -1,0 +1,17 @@
+name: zip++
+author: buddurid
+category: pwn
+description: why isn't my compressor compressing ?!
+value: 500
+protocol: tcp
+connection_info: nc pwn-14caf623.p1.securinets.tn 1300
+
+flags:
+- Securinets{}
+
+files:
+- to_give.zip
+
+state: hidden
+
+version: '0.1'
