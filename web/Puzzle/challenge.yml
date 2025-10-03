@@ -1,0 +1,33 @@
+name: "Puzzle"
+author: "Karrab"
+category: Web Exploitation
+description: |-
+  Solve with no source if you're hardcore.
+
+  `Link IP`
+
+  **author**: Karrab
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+#Incase of Static Flag
+flags:
+  - Securinets{777_P13c3_1T_Up_T0G3Th3R}
+#########################
+
+#Incase Of Dynamic Flag
+flags:
+    - {
+            type: "regex",
+            content: "^CCTF{FLAG_REGEX}$",
+            data: "case_insensitive",
+        }
+#########################
+
+files:
+state: hidden
+version: "0.1"

@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: ./src  
+      dockerfile: Dockerfile   
+    container_name: puzzle
+    ports:
+      - '5000:5000'
+    
+    restart: unless-stopped
