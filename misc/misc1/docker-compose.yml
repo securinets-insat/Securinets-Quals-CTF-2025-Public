@@ -1,0 +1,10 @@
+services:
+  shifting-jail:
+    build: .
+    image: shifting-jail:latest
+    ports:
+      - "1337:1337"
+    restart: unless-stopped
+    mem_limit: 1000M
+    cpus: 1
+    read_only: true
