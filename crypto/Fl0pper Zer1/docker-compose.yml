@@ -1,0 +1,12 @@
+version: '3'
+services:
+  crypto:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: fl0pper-zer1
+    ports:
+      - 6002:4871
+    restart: unless-stopped
+    mem_limit: 2000M
+    cpus: 2
