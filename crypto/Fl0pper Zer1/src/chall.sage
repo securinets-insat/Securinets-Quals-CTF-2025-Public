@@ -29,7 +29,7 @@ class SecureSignService:
         P.<x> = PolynomialRing(GF(self.order))
         poly = sum(c*x^i for i, c in enumerate(coeffs))
 
-        for x in range(1, 6):
+        for x in range(1, 5):
             y = poly(x=x)
             shares.append((x, y))
         return shares
@@ -152,3 +152,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(json.dumps({'error': 'Oops! Something went wrong'}))
             break
+
