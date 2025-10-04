@@ -8,5 +8,5 @@ services:
     ports:
       - 6002:4871
     restart: unless-stopped
-    mem_limit: 2000M
-    cpus: 2
+    mem_limit: 3000M
+    cpus: 3

@@ -1,5 +1,7 @@
 FROM sagemath/sagemath:latest
 
+USER root
+
 RUN sage -pip install pycryptodome
 RUN sage -pip install fastecdsa
 
@@ -19,6 +21,8 @@ COPY chall.sage .
 COPY secret.sage .
 
 EXPOSE 4871
+
+USER sage
 
 #CMD ["sage", "chall.sage"]
 CMD ["socat", "TCP-LISTEN:4871,fork,reuseaddr", "EXEC:'sage chall.sage',pty,stderr"]
