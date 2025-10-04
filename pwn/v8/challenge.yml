@@ -7,8 +7,13 @@ author: "buddurid"
 category: pwn
 description: i ran out of descriptions . Just solve it ig ??!!
 value: 500
-type: standard
 protocol: tcp
+
+type: dynamic 
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
 connection_info: nc pwn-14caf623.p1.securinets.tn 1303
 flags:
     - Securinets{}

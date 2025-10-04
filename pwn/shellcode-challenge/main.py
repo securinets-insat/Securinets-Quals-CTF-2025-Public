@@ -10,20 +10,24 @@ from capstone import CS_OP_REG
 def check(code: bytes):
     if len(code) > 0x2000:
         return False
+    code_len=len(code)
 
     md = Cs(CS_ARCH_X86, CS_MODE_64)
     md.detail = True
-
+    decoded=0
     for insn in md.disasm(code, 0):
         name = insn.insn_name()
+        decoded+=insn.size
         if name!="pop" and name!="push" :
             if name=="int3" :
                 continue
             return False
         if insn.operands[0].type!=CS_OP_REG:
             return False
-            
         
+    if decoded!=code_len:
+        print("nice try")
+        return False
     return True
 
 def run(code: bytes):

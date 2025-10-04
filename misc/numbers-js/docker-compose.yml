@@ -4,9 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: fl1pper-zer0
     ports:
-      - 7001:4869
+      - 7001:5000
     restart: unless-stopped
     mem_limit: 1000M
     cpus: 1

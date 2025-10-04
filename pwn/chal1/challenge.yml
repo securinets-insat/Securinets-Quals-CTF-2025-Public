@@ -6,6 +6,12 @@ value: 500
 protocol: tcp
 connection_info: nc pwn-14caf623.p1.securinets.tn 1300
 
+type: dynamic 
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
+
 flags:
 - Securinets{}
 
