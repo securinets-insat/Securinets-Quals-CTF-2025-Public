@@ -1,0 +1,12 @@
+version: '3'
+services:
+  crypto:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: xtasy
+    ports:
+      - 4870:4870
+    restart: unless-stopped
+    mem_limit: 2000M
+    cpus: 2
