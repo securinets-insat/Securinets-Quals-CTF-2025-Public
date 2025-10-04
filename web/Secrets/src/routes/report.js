@@ -14,7 +14,7 @@ router.get("/", authMiddleware, (req, res) => {
 router.post("/", authMiddleware, async (req, res) => {
   const { url } = req.body;
 
-  if (!url || !url.startsWith("http")) {
+  if (!url || !url.startsWith("http://localhost:3000")) {
     return res.status(400).send("Invalid URL");
   }
 
