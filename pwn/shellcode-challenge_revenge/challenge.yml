@@ -1,0 +1,21 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "push pull pops REVENGE"
+author: "buddurid"
+category: pwn
+description: you aint getting away with it , not on my watch . 
+value: 500
+type: standard
+protocol: tcp
+connection_info: nc pwn-14caf623.p1.securinets.tn 9090
+flags:
+    - Securinets{friendhsip_with_capstone_ended}
+
+files:
+    - to_give.zip
+
+state: hidden
+
+version: "0.1"

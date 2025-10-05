@@ -1,6 +1,6 @@
 from pwn import *
 
-p=remote("localhost",1337)
+p=remote("pwn-14caf623.p1.securinets.tn",9003)
 
 exploit=open("exploit.js").read()
 p.sendline(str(len(exploit)))

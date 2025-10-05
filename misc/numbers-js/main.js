@@ -23,35 +23,27 @@ console.log("Welcome to our hashing factory ");
 console.log("let's see how much trouble you can cause");
 
 function generateHash(input) {
-  // Apply simple reversible mangling directly (reverse + digit shift)
   input = input
     .split("")
     .reverse()
     .map(d => ((parseInt(d, 10) + 1) % 10).toString())
     .join("");
 
-  // Compute input-dependent values
   const prime1 = 31;
   const prime2 = 37;
   let hash = 0;
   let altHash = 0;
   
-  // Input-dependent computation
   for (let i = 0; i < input.length; i++) {
     hash = hash * prime1 + input.charCodeAt(i);
     altHash = altHash * prime2 + input.charCodeAt(input.length - 1 - i);
   }
   
-  // Dynamic, input-dependent factor
-  const factor = Math.abs(hash - altHash) % 1000 + 1; // 1 to 1000
-  
-  // Vulnerability: Number conversion
-  const normalized = Number(input);
-  
-  // Obfuscated adjustment
-  const modulator = (hash % factor) + (altHash % factor); // Input-dependent
-  const balancer = Math.floor(modulator / factor) * factor; // Near-zero adjustment
-  return normalized + balancer % 1; // Mod 1 ensures no effect
+  const factor = Math.abs(hash - altHash) % 1000 + 1; 
+  const normalized = +input;
+  const modulator = (hash % factor) + (altHash % factor); 
+  const balancer = Math.floor(modulator / factor) * factor;
+  return normalized + balancer % 1; 
 }
 
 (async () => {

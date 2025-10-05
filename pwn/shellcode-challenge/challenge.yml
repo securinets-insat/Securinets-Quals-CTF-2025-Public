@@ -7,12 +7,16 @@ author: "buddurid"
 category: pwn
 description: Shellcoding in the big 25 😱 
 value: 500
-type: standard
 protocol: tcp
 connection_info: nc pwn-14caf623.p1.securinets.tn 1301
 flags:
     - Securinets{}
 
+type: dynamic 
+extra:
+  initial: 500
+  decay: 100
+  minimum: 50
 files:
     - to_give.zip
 

@@ -14,7 +14,7 @@ def debug():
 local=len(sys.argv)
 exe=ELF("./main",checksec=False)
 libc=ELF("/lib/x86_64-linux-gnu/libc.so.6",checksec=False)
-nc="nc zaeazeaz 111"
+nc="nc pwn-14caf623.p1.securinets.tn 9000"
 port=int(nc.split(" ")[2])
 host=nc.split(" ")[1]
 

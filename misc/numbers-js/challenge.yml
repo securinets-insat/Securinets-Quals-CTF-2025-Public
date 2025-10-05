@@ -1,0 +1,23 @@
+name: md7
+author: buddurid
+category: pwn
+description: md5 and md6 didnt't settle with me when i'm dealing with numbers 
+value: 500
+protocol: tcp
+connection_info: nc pwn-14caf623.p1.securinets.tn 1300
+
+type: dynamic 
+extra:
+  initial: 500
+  decay: 1
+  minimum: 50
+
+flags:
+- Securinets{floats_in_js_xddddd}
+
+files:
+- to_give.zip
+
+state: hidden
+
+version: '0.1'

@@ -1,0 +1,23 @@
+name: "spell manager"
+author: "retr0"
+category: PWN
+description: |-
+  Deep within the dungeons of an ancient wizard's archive lies a worn grimoire, its covers filled with abandoned spells.
+  Rumor has it that the most powerful spell is written within the book's ciphertext, beneath the veils of mystical magic that protect it.
+  Your task is to dissect the spells and find the cryptic ritual hidden within the pages of the grimoire.
+
+  `$ nc pwn-14caf623.p1.securinets.tn 9091`
+
+  **author**: retr0
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 1
+  minimum: 50
+flags:
+  - Securinets{2b2b12830c88c08096092ec6c07c3e47c543ef893150a4280892f867b67dba39}
+files:
+  - handout/toGive.7z
+state: hidden
+version: "0.1"

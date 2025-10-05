@@ -7,6 +7,7 @@ services:
     container_name: number_js
     ports:
       - 7011:5000
+
     restart: unless-stopped
     mem_limit: 1000M
     cpus: 1
