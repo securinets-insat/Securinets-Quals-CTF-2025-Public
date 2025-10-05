@@ -22,7 +22,7 @@ COPY secret.sage .
 
 EXPOSE 4871
 
-USER sage
+#USER sage
 
 #CMD ["sage", "chall.sage"]
 CMD ["socat", "TCP-LISTEN:4871,fork,reuseaddr", "EXEC:'sage chall.sage',pty,stderr"]
