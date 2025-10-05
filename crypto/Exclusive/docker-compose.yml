@@ -1,0 +1,12 @@
+version: '3'
+services:
+  crypto:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: exclusive
+    ports:
+      - 4873:4873
+    restart: unless-stopped
+    mem_limit: 2000M
+    cpus: 2

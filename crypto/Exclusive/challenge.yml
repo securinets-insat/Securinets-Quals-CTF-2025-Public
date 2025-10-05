@@ -1,0 +1,21 @@
+name: "Exclusive"
+author: "Aptx"
+category: crypto
+description: |-
+  Had enough? Here's an exclusive content.
+
+  `nc <IP> <PORT>`
+
+  **author**: Aptx
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - Securinets{bd0127cff0a13e60e4018a1bcf623195e4992325682b32f69d5d1fcd0b8e00ec}
+files:
+  - src/chall.py
+state: hidden
+version: "0.1"
