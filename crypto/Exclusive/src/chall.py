@@ -1,8 +1,6 @@
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-import os, signal
+import os
 from secret import FLAG
-
-signal.alarm(30)
 
 class AES_XTS:
     def __init__(self):
@@ -44,3 +42,4 @@ if __name__ == '__main__':
 
     except:
         print('Oops! Something went wrong')
+
